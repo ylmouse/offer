@@ -4,14 +4,21 @@ git init
 git clone <url>
 git status
 git diff
-git add <file>
-git commit -m "内容"
-git push origin <分支>
+git add <file>   //负责把工作区的修改提交到暂存区
+git commit -m "内容"  //负责把暂存区的修改提交到分支上
+git push origin <分支>   //把分支上的代码push 到远端
 git pull origin <分支>
 git log //查看提交记录
 git log --pretty oneline //简化提交记录
 git reset --hard HEAD^  //返回到上一版本
 git reset --hard <版本号commit id>  //返回到制定的版本号
 git reflog //查看所有操作的commit id
+
+好吧，假设现在我修改了一次代码，但是在我add之前察觉了，当然我可以手动撤销，但是我傲娇啊,我就想在命令行干，怎办？
+git checkout --<file>  退回到上次commit 的状态，将工作区的修改撤销；
+emmmmm.....有点意外的是我在add 之后才发现不妥,好吧，怎末办？？
+git reset HEAD <file>//将暂存区的修改撤销，再次回到工作区
+然后再用上面的git checkout -- <file>把工作区的撤销，好了
+
 
  
