@@ -1,3 +1,10 @@
-// it will be a program file
-learning git ;
-hello git world
+//Git learning 
+//初始化：
+git init or git clone 
+//增加一个文件，提交过程
+git add <file>
+git commit -m "内容"
+git push origin <分支>
+//更新
+git pull origin <分支>
+ 
