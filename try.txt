@@ -1,10 +1,17 @@
 //Git learning 
-//初始化：
-git init or git clone 
-//增加一个文件，提交过程
+
+git init 
+git clone <url>
+git status
+git diff
 git add <file>
 git commit -m "内容"
 git push origin <分支>
-//更新
 git pull origin <分支>
+git log //查看提交记录
+git log --pretty oneline //简化提交记录
+git reset --hard HEAD^  //返回到上一版本
+git reset --hard <版本号commit id>  //返回到制定的版本号
+git reflog //查看所有操作的commit id
+
  
