@@ -15,10 +15,21 @@ git reset --hard <版本号commit id>  //返回到制定的版本号
 git reflog //查看所有操作的commit id
 
 好吧，假设现在我修改了一次代码，但是在我add之前察觉了，当然我可以手动撤销，但是我傲娇啊,我就想在命令行干，怎办？
-git checkout --<file>  退回到上次commit 的状态，将工作区的修改撤销；
+git checkout --<file>  退回到上次commit 的状态，将工作区的修改撤销；其实是把工作取得代码回到和版本库里一致
 emmmmm.....有点意外的是我在add 之后才发现不妥,好吧，怎末办？？
 git reset HEAD <file>//将暂存区的修改撤销，再次回到工作区
 然后再用上面的git checkout -- <file>把工作区的撤销，好了
+
+删除文件：git rm <file> ;git commit -m "bala"
+          先删除；git add <file> ;git commit -m "bala" 
+合并分支：git merge dev;合并制定的分支到当前分支
+删除分支：git branch -d dev
+
+git stash ;git pop; git stash list;
+git rebase :把提交变成一条线
+
+看到了我当时问谭武的问题，就是我的提交被reject了，原因是有人比你先提交，你得pull下代码
+
 
 
  
