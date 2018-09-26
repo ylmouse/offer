@@ -1,0 +1,37 @@
+﻿1 安装过程中的一次错误：当安装完成后在命令行执行mysql -uroot -p****时，出现错误‘MySQL’不是内部或外部命令，也不是可运行的程序或批处理文件。
+原因：当我在敲mysql时，其实系统是调用了mysql.exe文件，这个文件在我的安装目录下的/bin，
+解决：现在在我敲mysql时，系统找不到对应的可执行文件，可以把bin目录加到环境变量里或者干脆到安装目录下的。/bin里找
+2 连接成功后的黑窗口是甚麽？与mysql服务器有啥关系？
+答：是客户端，其他的客户端还有：navcat,mysqlfront,phpMyAdmin
+3 show databases; //查看所有数据库
+  use <database>; //选择数据库
+  create database <库名> charset utf-8 //建数据库
+  drop  //删除一个数据库
+  Mysql中，表/列可以改名；database不可以改名。
+  show tables; //查看所有表
+  rename oldname to newname;
+4 创建表：
+  create table class(
+  id int primary key auto_increment,
+  sname varchar(10) not null default '',
+  gender char(1) not null default '',
+  campany varchar(10) not null default 0.00,
+  salary decimal(6,2) not null default 0
+  )engine myisam charset utf8;
+  插入数据：
+  insert into class
+  (id,sname,salary)
+  values
+  (1,'yang',2000),
+  (2,'lan',3000);
+  set names gdk;
+  select * from stu;
+5 drop & delete & truncate
+  delete :删除表中的行  语法：删除某行-delete from <table> where <lie>=value;
+                              删除所有行-delete from <table> 或 delet * from <表>
+	drop：删除表：drop table <表名>；
+	trancate:用于删除表内的所有数据  语法：truncate table <表名>；
+	当你不再需要该表时， 用 drop;
+    当你仍要保留该表，但要删除所有记录时， 用 truncate;
+    当你要删除部分记录时（always with a where clause), 用 delete.
+6 
